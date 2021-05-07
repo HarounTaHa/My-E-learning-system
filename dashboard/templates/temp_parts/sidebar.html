@@ -1,0 +1,183 @@
+ {% load static %}
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a class="brand-link">
+      <img src="{% static 'dist/img/logo.png'%}" alt="Logo" style="display: block; margin-left: auto;margin-right: auto;width: 50%;">
+      <p class="brand-text font-weight-light"></p>
+    </a>
+
+
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="{% static 'dist/img/haroun_profile.jpg'%}" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">
+            {{ request.user.first_name }}
+           {{ request.user.last_name }}
+          </a>
+          <small class="text-white">{{ request.user.last_login }}</small>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+          <li class="nav-item">
+            <a href="{% url 'dashboard_home'%}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Dashboard Home
+              </p>
+            </a>
+          </li>
+
+<!------------------Teacher------------------------------->
+           <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-briefcase"></i>
+              <p>
+                Teachers
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'dashboard_teacher_show' %}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Show</p>
+                </a>
+              </li>
+                  <li class="nav-item">
+                <a href="{% url 'dashboard_teacher_add' %}" class="nav-link">
+                        <i class="fas fa-user-plus nav-icon"></i>
+                  <p>Add</p>
+                </a>
+              </li>
+                  <li class="nav-item">
+                <a href="{% url 'dashboard_teacher_edit' %}" class="nav-link">
+          <i class="fas  fa-user-edit nav-icon"></i>
+                  <p>Edit</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+<!------------------Student------------------------------->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-graduate"></i>
+              <p>
+                Students
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'dashboard_student_show' %}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+
+                  <p>Show</p>
+                </a>
+              </li>
+                  <li class="nav-item">
+                <a href="{% url 'dashboard_student_add' %}" class="nav-link">
+              <i class="fas fa-user-plus nav-icon"></i>
+                  <p>Add</p>
+                </a>
+              </li>
+                  <li class="nav-item">
+                <a href="{% url 'dashboard_student_edit' %}" class="nav-link">
+                  <i class="fas  fa-user-edit nav-icon"></i>
+                  <p>Edit</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+<!-------------------Section------------------------------>
+           <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Sections
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'dashboard_section_show' %}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Show</p>
+                </a>
+              </li>
+                  <li class="nav-item">
+                <a href="{% url 'dashboard_section_add' %}" class="nav-link">
+                        <i class="fas  fa-plus-square nav-icon"></i>
+                  <p>Add</p>
+                </a>
+              </li>
+                  <li class="nav-item">
+                <a href="{% url 'dashboard_section_edit' %}" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>Edit</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+<!--------------------Courses----------------------------->
+     <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Courses
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{% url 'dashboard_course_show' %}" class="nav-link">
+                  <i class="fas fa-table nav-icon"></i>
+                  <p>Show</p>
+                </a>
+              </li>
+                  <li class="nav-item">
+                <a href="{% url 'dashboard_course_add' %}" class="nav-link">
+                        <i class="fas  fa-plus-square nav-icon"></i>
+                  <p>Add</p>
+                </a>
+              </li>
+                  <li class="nav-item">
+                <a href="{% url 'dashboard_course_edit' %}" class="nav-link">
+                  <i class="fas fa-edit nav-icon"></i>
+                  <p>Edit</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+<!------------------------------------------------->
+
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+
+  </aside>

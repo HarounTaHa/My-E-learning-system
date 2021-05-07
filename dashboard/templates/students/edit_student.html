@@ -1,0 +1,180 @@
+{% extends 'dashboard_base.html' %}
+
+{%block title%}Edit Student{%endblock%}
+{%block PageContent%}
+
+ <div class="content-header">
+              <div class="container-fluid">
+                <div class="row mb-2">
+                  <div class="col-sm-6">
+                    <h1 class="m-0">Edit Student</h1>
+                  </div><!-- /.col -->
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active">Dashboard v1</li>
+                    </ol>
+                  </div><!-- /.col -->
+                </div><!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
+
+
+<section class="content">
+              <div class="container-fluid">
+                <!-- Small boxes (Stat box) -->
+               <form method="post" action="{% url 'dashboard_student_add' %}">
+                 <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Level</label>
+                                <select name="level_student" class="form-control">
+                                    <option value="False">---</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Branch</label>
+                                <select name="branch_student" class="form-control" disabled>
+                                    <option value="False">---</option>
+                                    <option value="">5/1</option>
+                                    <option value="">5/2</option>
+                                    <option value="">5/3</option>
+                                    <option value="">5/4</option>
+                                    <option value="">5/5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="row">
+                          <div class="col-8">
+                            <div class="form-group">
+                                <label>Select Name</label>
+                                <select name="branch_student" class="form-control" disabled>
+                                    <option value="False">---</option>
+                                    <option value="">5/1</option>
+                                    <option value="">5/2</option>
+                                    <option value="">5/3</option>
+                                    <option value="">5/4</option>
+                                    <option value="">5/5</option>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                              <button type="submit" class="mr-5 btn btn-danger btn-block disable" style="position: absolute;top: 35%;">Delete</button>
+
+                          </div>
+                      </div>
+               </form>
+      <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Edit Student</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form method="post" action="{% url 'dashboard_student_add' %}">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label> Name</label>
+                                <input name="name_student" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input name="password_student" type="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input nmae="phoneNumber_student" type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Identity Number</label>
+                                <input name="identityNumber_student" type="number" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Date -->
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label>Date:</label>
+                                <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                    <input name="date_student" type="text" class="form-control datetimepicker-input"
+                                           data-target="#reservationdate"/>
+                                    <div class="input-group-append" data-target="#reservationdate"
+                                         data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label>Gender</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender_student">
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender_student">
+                        <label class="form-check-label mb-4">Female</label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Level</label>
+                                <select name="level_student" class="form-control">
+                                    <option value="False">---</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Branch</label>
+                                <select name="branch_student" class="form-control" disabled>
+                                    <option value="False">---</option>
+                                    <option value="">5/1</option>
+                                    <option value="">5/2</option>
+                                    <option value="">5/3</option>
+                                    <option value="">5/4</option>
+                                    <option value="">5/5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-11"></div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </div>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+                <!-- /.row -->
+
+              </div><!-- /.container-fluid -->
+            </section>
+{%endblock%}

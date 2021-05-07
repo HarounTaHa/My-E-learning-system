@@ -1,0 +1,51 @@
+{% extends 'dashboard_base.html' %}
+
+{%block title%}Add Student{%endblock%}
+{%block PageContent%}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="card card-secondary">
+            <div class="card-header">
+                <h3 class="card-title">Add Course</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form method="post" action="{% url 'dashboard_student_add' %}">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label> Name Course</label>
+                                <input name="name_student" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Semester Number</label>
+                                <select name="level_student" class="form-control">
+                                    <option value="False">---</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-11"></div>
+                        <button type="submit" class="btn btn-secondary btn-block">Submit</button>
+                    </div>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+        <!-- /.card -->
+    </div><!-- /.container-fluid -->
+</div>
+{%endblock%}

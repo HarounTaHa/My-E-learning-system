@@ -1,0 +1,75 @@
+{% extends 'dashboard_base.html' %}
+
+{%block title%}Show Teacher{%endblock%}
+{%block PageContent%}
+
+
+   <div class="content-header">
+              <div class="container-fluid">
+                <div class="row mb-2">
+                  <div class="col-sm-6">
+                    <h1 class="m-0">Show Teacher</h1>
+                  </div><!-- /.col -->
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active">Dashboard v1</li>
+                    </ol>
+                  </div><!-- /.col -->
+                </div><!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
+  <section class="content">
+              <div class="container-fluid">
+                <!-- Small boxes (Stat box) -->
+               <form method="post" action="{% url 'dashboard_student_add' %}">
+                 <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Level</label>
+                                <select name="level_student" class="form-control">
+                                    <option value="False">---</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Branch</label>
+                                <select name="branch_student" class="form-control" disabled>
+                                    <option value="False">---</option>
+                                    <option value="">5/1</option>
+                                    <option value="">5/2</option>
+                                    <option value="">5/3</option>
+                                    <option value="">5/4</option>
+                                    <option value="">5/5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+               </form>
+
+                <div class="row">
+                    <table class="table">
+                       <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name Teacher</th>
+                            <th>Course Name</th>
+                            <th>Section Number</th>
+                            <th>Section Branch</th>
+                            <th>Phone Number</th>
+                            <th>Identity Number</th>
+                        </tr>
+                        </thead>
+
+                    </table>
+                </div>
+                <!-- /.row -->
+
+              </div><!-- /.container-fluid -->
+            </section>
+{%endblock%}

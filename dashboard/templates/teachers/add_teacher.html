@@ -1,0 +1,123 @@
+{% extends 'dashboard_base.html' %}
+
+{%block title%}Add Teacher{%endblock%}
+{%block PageContent%}
+
+   <div class="content-header">
+              <div class="container-fluid">
+                <div class="card card-success">
+            <div class="card-header">
+                <h3 class="card-title">Add Teacher</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form method="post" action="{% url 'dashboard_student_add' %}">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label> Name Teacher</label>
+                                <input name="name_student" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input name="password_student" type="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input nmae="phoneNumber_student" type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Identity Number</label>
+                                <input name="identityNumber_student" type="number" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Date -->
+
+                    <label>Gender</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender_student">
+                        <label class="form-check-label">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender_student">
+                        <label class="form-check-label mb-4">Female</label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Level</label>
+                                <select name="level_student" class="form-control">
+                                    <option value="False">---</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                    <option value="">6</option>
+                                    <option value="">7</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Branch</label>
+                                <select name="branch_student" class="form-control" disabled>
+                                    <option value="False">---</option>
+                                    <option value="">5/1</option>
+                                    <option value="">5/2</option>
+                                    <option value="">5/3</option>
+                                    <option value="">5/4</option>
+                                    <option value="">5/5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Course Name</label>
+                                <select name="level_student" class="form-control" disabled>
+                                    <option value="False">---</option>
+                                    <option value="">تربية اسلامية</option>
+                                    <option value="">علوم</option>
+                                    <option value="">عربي</option>
+                                    <option value="">رياضيات</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label>Select Semester Number</label>
+                                <select name="branch_student" class="form-control" disabled>
+                                    <option value="False">---</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-11"></div>
+                        <button type="submit" class="btn btn-success btn-block">Submit</button>
+                    </div>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div><!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
+{%endblock%}
