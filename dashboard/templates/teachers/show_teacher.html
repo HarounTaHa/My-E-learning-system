@@ -58,13 +58,39 @@
                         <tr>
                             <th>#</th>
                             <th>Name Teacher</th>
-                            <th>Course Name</th>
-                            <th>Section Number</th>
-                            <th>Section Branch</th>
                             <th>Phone Number</th>
                             <th>Identity Number</th>
                         </tr>
                         </thead>
+                        <tbody>
+                         {% for obj in teachers %}
+                         <tr>
+                        <td>
+                               {{ obj.pk }}
+                        </td>
+
+                        <td>
+                              {{ obj.name }}
+                        </td>
+
+                        <td>
+                              {{ obj.phoneNumber }}
+
+                        </td>
+
+                        <td>
+                              {{ obj.identityNumber }}
+
+                        </td>
+
+                        <td>
+                            <a class="btn btn-info btn-sm" href="{% url 'dashboard_teacher_edit' obj.pk %}">Edit</a>
+                            <a class="btn btn-danger btn-sm"  href="{% url 'dashboard_teacher_delete' obj.pk %}">Delete</a>
+                        </td>
+
+                </tr>
+                       {% endfor %}
+             </tbody>
 
                     </table>
                 </div>

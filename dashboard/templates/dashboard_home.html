@@ -27,14 +27,14 @@
                     <!-- small box -->
                     <div class="small-box bg-info">
                       <div class="inner">
-                        <h3>250</h3>
+                        <h3>{{ count_students }}</h3>
 
                         <p>Students</p>
                       </div>
                       <div class="icon">
                        <span class="iconify" data-icon="noto:man-student-light-skin-tone" data-inline="false"></span>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="{% url 'dashboard_student_show' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <!-- ./col -->
@@ -42,13 +42,13 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                       <div class="inner">
-                        <h3>35</h3>
+                        <h3>{{count_teachers}}</h3>
                         <p >Teachers</p>
                       </div>
                       <div class="icon">
                       <span class="iconify" data-icon="noto:man-teacher-light-skin-tone" data-inline="false"></span>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="{% url 'dashboard_teacher_show' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <!-- ./col -->
@@ -56,14 +56,14 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                       <div class="inner">
-                        <h3>44</h3>
+                        <h3>{{count_sections}}</h3>
 
                         <p >Sections</p>
                       </div>
                       <div class="icon">
                  <span class="iconify" data-icon="medical-icon:health-education" data-inline="false"></span>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="{% url 'dashboard_section_show' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <!-- ./col -->
@@ -71,28 +71,28 @@
                     <!-- small box -->
                     <div class="small-box bg-danger">
                       <div class="inner">
-                        <h3>65</h3>
+                        <h3>{{count_quizzes}}</h3>
 
                         <p>Quizzes</p>
                       </div>
                       <div class="icon">
                         <span class="iconify" data-icon="fluent:quiz-new-48-filled" data-inline="false"></span>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="{% url 'dashboard_quiz_show' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
               <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-secondary">
                       <div class="inner">
-                        <h3>23</h3>
+                        <h3>{{count_courses}}</h3>
 
                         <p>Courses</p>
                       </div>
                       <div class="icon">
                           <span class="iconify" data-icon="carbon:course" data-inline="false"></span>
                       </div>
-                      <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="{% url 'dashboard_course_show' %}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                   <!-- ./col -->

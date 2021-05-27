@@ -1,0 +1,28 @@
+{% extends 'dashboard_base.html' %}
+{% load static %}
+    {% block link %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'dist/img/logo.png' %}"/>
+    <!-- custom css & js-->
+   <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% endblock %}
+    <!-- favicon -->
+
+
+
+    {%block title%}
+
+    quiz app| {% block title_quiz %}{% endblock title_quiz %}
+
+    {%endblock%}
+
+   {%block PageContent%}
+        {% block content_quiz %}
+        {% endblock content_quiz %}
+    {%endblock%}
+
+    {% block script %}
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    {% block scripts_quiz %}
+    {% endblock scripts_quiz %}
+    {% endblock %}

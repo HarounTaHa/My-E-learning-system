@@ -1,0 +1,87 @@
+{% extends 'quiz_base.html' %}
+{% load static %}
+
+{% block title_quiz %}
+{{obj.Quiz_name}}
+{% endblock title_quiz %}
+
+{% block content_quiz %}
+<div class="content-header">
+              <div class="container-fluid">
+                <div class="row mb-2">
+                  <div class="col-sm-6">
+                    <h1 class="m-0">Show section</h1>
+                  </div><!-- /.col -->
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active">Dashboard v1</li>
+                    </ol>
+                  </div><!-- /.col -->
+                </div><!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
+
+  <section class="content">
+              <div class="container-fluid">
+                <!-- Small boxes (Stat box) -->
+                <div class="row">
+                    <table class="table">
+                       <thead>
+                        <tr>
+
+                            <th>#</th>
+                            <th>Name quize</th>
+                            <th>Teacher</th>
+                            <th>Course</th>
+                            <th>Section</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                             {% for obj in objects %}
+
+                             <td>
+                                {{ obj.pk }}
+                             </td>
+                             <td>
+                                     {{ obj.quiz_name }}
+                             </td>
+                             <td>
+                             {{ obj.teacher }}
+                             </td>
+                               <td>
+                             {{ obj.course }}
+                             </td>
+                                <td>
+                             {{ obj.section }}
+                             </td>
+
+                             {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.row -->
+
+              </div><!-- /.container-fluid -->
+            </section>
+
+{% endblock content_quiz %}
+
+    {% block scripts_quiz %}
+        <script src="{% static 'main.js' %}" defer></script>
+    {% endblock scripts_quiz %}
+
+
+
+<!--              <button-->
+<!--                        class="btn btn-link modal-button"-->
+<!--                        data-pk="{{ obj.pk }}"-->
+<!--                        data-quiz="{{ obj.quiz_name }}"-->
+<!--                        data-questions="{{ obj.number_of_question }}"-->
+<!--                        data-time="{{ obj.time }}"-->
+<!--                        data-toggle="modal"-->
+<!--                        data-target="#quizModal">-->
+<!--                    {{ obj.quiz_name }}-->
+
+<!--                </button>-->
